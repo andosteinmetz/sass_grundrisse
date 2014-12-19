@@ -9,10 +9,13 @@
 /*
 *  below is the column generator mixin.
 *  the generated styles are percentage-based, and will scale to either the window or their parent element.
-*  rows can be given an em or pixel widths at various breakpoints for a stepwise responsive grid.
-*  it takes three arguments - the number of units the column will occupy, the number of units in the row, and the gutters (optional).
-*  gutter width should be given as a percentage.
-*  if no gutter width is specified, it defaults to the global value provided in "_variables.scss".
+*  rows can be given fixed widths in ems or pixels at various breakpoints for a stepwise responsive grid.
+*  it takes three arguments -
+*  $units: (the number of units the column will occupy)
+*  $of-how-many: the number of units in the row, and
+*  $gutters (optional): specifying the width of the gutters between columns.
+*  gutter width should be given as a percentage. gutters are to the left, and omitted on the first child.
+*  if no gutter width is specified, it defaults to the global value provided in "_variables.scss" as $gutter-width.
 */
 
 @mixin column($units, $of-how-many, $gutter: $gutter-width){
