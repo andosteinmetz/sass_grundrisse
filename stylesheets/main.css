@@ -596,94 +596,152 @@ th {
   padding: 0;
 }
 
+/*
+*
+* This is a simple system for generating your own responsive grids.
+* Rather than creating a grid, these tools allow you to make your own grids as you need them.
+* Responsive rules can be declared on a per-column or a per-row basis, as preferred.
+*
+*/
+/* line 18, ../sass/_grid.scss */
+.row {
+  position: relative;
+  /* another approach on a per-row basis */
+  /* inline-block rows for top menus, etc. */
+}
 /* line 13, ../sass/_variables.scss */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 6, ../sass/_grid.scss */
+/* line 22, ../sass/_grid.scss */
 .row .col {
   margin-left: 1.5%;
   float: left;
+  /* one way of using media queries on a per-column basis */
 }
-/* line 12, ../sass/_grid.scss */
+/* line 28, ../sass/_grid.scss */
 .row .col:first-child {
   margin-left: 0;
 }
-/* line 16, ../sass/_grid.scss */
+/* line 34, ../sass/_grid.scss */
 .row .col.one-of-two {
   width: 49.25%;
+  margin-left: 1.5%;
+  float: left;
 }
-/* line 20, ../sass/_grid.scss */
+/* line 13, ../sass/_grid.scss */
+.row .col.one-of-two:first-child {
+  margin-left: 0;
+}
+/* line 38, ../sass/_grid.scss */
 .row .col.one-of-three {
   width: 32.33333%;
+  margin-left: 1.5%;
+  float: left;
 }
-/* line 24, ../sass/_grid.scss */
+/* line 13, ../sass/_grid.scss */
+.row .col.one-of-three:first-child {
+  margin-left: 0;
+}
+/* line 42, ../sass/_grid.scss */
 .row .col.two-of-three {
   width: 66.16667%;
+  margin-left: 1.5%;
+  float: left;
 }
-/* line 28, ../sass/_grid.scss */
+/* line 13, ../sass/_grid.scss */
+.row .col.two-of-three:first-child {
+  margin-left: 0;
+}
+/* line 46, ../sass/_grid.scss */
 .row .col.one-of-four {
   width: 23.875%;
+  margin-left: 1.5%;
+  float: left;
 }
-/* line 32, ../sass/_grid.scss */
+/* line 13, ../sass/_grid.scss */
+.row .col.one-of-four:first-child {
+  margin-left: 0;
+}
+/* line 50, ../sass/_grid.scss */
 .row .col.three-of-four {
   width: 74.625%;
+  margin-left: 1.5%;
+  float: left;
 }
-/* line 36, ../sass/_grid.scss */
-.row .col.one-of-five {
-  width: 18.8%;
+/* line 13, ../sass/_grid.scss */
+.row .col.three-of-four:first-child {
+  margin-left: 0;
 }
-/* line 40, ../sass/_grid.scss */
-.row .col.two-of-five {
-  width: 39.1%;
-}
-/* line 44, ../sass/_grid.scss */
-.row .col.three-of-five {
-  width: 59.4%;
-}
-/* line 48, ../sass/_grid.scss */
-.row .col.four-of-five {
-  width: 79.7%;
-}
-@media only screen and (max-width: 780px) {
-  /* line 53, ../sass/_grid.scss */
+@media only screen and (max-width: 50em) {
+  /* line 56, ../sass/_grid.scss */
+  .row .col.med-full-width {
+    width: 100%;
+    margin-left: 0;
+  }
+  /* line 61, ../sass/_grid.scss */
   .row .col.med-one-of-two {
     width: 49.25%;
+    margin-left: 1.5%;
+    float: left;
   }
-  /* line 55, ../sass/_grid.scss */
+  /* line 13, ../sass/_grid.scss */
+  .row .col.med-one-of-two:first-child {
+    margin-left: 0;
+  }
+  /* line 63, ../sass/_grid.scss */
   .row .col.med-one-of-two:nth-child(2n+1) {
     clear: both;
     margin-left: 0;
   }
-  /* line 60, ../sass/_grid.scss */
+  /* line 68, ../sass/_grid.scss */
   .row .col.med-one-of-three {
     width: 32.33333%;
+    margin-left: 1.5%;
+    float: left;
   }
-  /* line 62, ../sass/_grid.scss */
+  /* line 13, ../sass/_grid.scss */
+  .row .col.med-one-of-three:first-child {
+    margin-left: 0;
+  }
+  /* line 70, ../sass/_grid.scss */
   .row .col.med-one-of-three:nth-child(3n+1) {
     clear: both;
     margin-left: 0;
   }
-  /* line 67, ../sass/_grid.scss */
+  /* line 75, ../sass/_grid.scss */
   .row .col.med-two-of-three {
-    width: 66.06666%;
+    width: 66.16667%;
+    margin-left: 1.5%;
+    float: left;
   }
-  /* line 69, ../sass/_grid.scss */
+  /* line 13, ../sass/_grid.scss */
+  .row .col.med-two-of-three:first-child {
+    margin-left: 0;
+  }
+  /* line 77, ../sass/_grid.scss */
   .row .col.med-two-of-three:nth-child(3n+1) {
     clear: both;
     margin-left: 0;
   }
 }
-@media only screen and (max-width: 480px) {
-  /* line 6, ../sass/_grid.scss */
-  .row .col {
+@media only screen and (max-width: 30em) {
+  /* line 88, ../sass/_grid.scss */
+  .row.sm-single-col .col {
     width: 100% !important;
     margin-left: 0 !important;
   }
 }
-/* line 85, ../sass/_grid.scss */
+@media only screen and (max-width: 50em) {
+  /* line 97, ../sass/_grid.scss */
+  .row.med-single-col .col {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+/* line 106, ../sass/_grid.scss */
 .row.inline-block {
   text-align: justify;
 }
@@ -699,25 +757,49 @@ th {
 .row.inline-block > * {
   display: inline-block;
 }
-/* line 87, ../sass/_grid.scss */
+/* line 108, ../sass/_grid.scss */
 .row.inline-block .col {
   margin-left: 0;
 }
-/* line 89, ../sass/_grid.scss */
+/* line 110, ../sass/_grid.scss */
 .row.inline-block .col.one-of-two {
   width: 49.25%;
+  margin-left: 1.5%;
+  float: left;
 }
-/* line 92, ../sass/_grid.scss */
+/* line 13, ../sass/_grid.scss */
+.row.inline-block .col.one-of-two:first-child {
+  margin-left: 0;
+}
+/* line 113, ../sass/_grid.scss */
 .row.inline-block .col.one-of-three {
   width: 32.33333%;
+  margin-left: 1.5%;
+  float: left;
 }
-/* line 95, ../sass/_grid.scss */
+/* line 13, ../sass/_grid.scss */
+.row.inline-block .col.one-of-three:first-child {
+  margin-left: 0;
+}
+/* line 116, ../sass/_grid.scss */
 .row.inline-block .col.one-of-four {
   width: 23.875%;
+  margin-left: 1.5%;
+  float: left;
 }
-/* line 98, ../sass/_grid.scss */
+/* line 13, ../sass/_grid.scss */
+.row.inline-block .col.one-of-four:first-child {
+  margin-left: 0;
+}
+/* line 119, ../sass/_grid.scss */
 .row.inline-block .col.three-of-four {
   width: 74.625%;
+  margin-left: 1.5%;
+  float: left;
+}
+/* line 13, ../sass/_grid.scss */
+.row.inline-block .col.three-of-four:first-child {
+  margin-left: 0;
 }
 
 /* line 6, ../sass/main.scss */
