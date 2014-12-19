@@ -6,6 +6,15 @@
 *
 */
 
+/*
+*  below is the column generator mixin.
+*  the generated styles are percentage-based, and will scale to either the window or their parent element.
+*  rows can be given an em or pixel widths at various breakpoints for a stepwise responsive grid.
+*  it takes three arguments - the number of units the column will occupy, the number of units in the row, and the gutters (optional).
+*  gutter width should be given as a percentage.
+*  if no gutter width is specified, it defaults to the global value provided in "_variables.scss".
+*/
+
 @mixin column($units, $of-how-many, $gutter: $gutter-width){
   width: (($units/$of-how-many)*100) - $gutter + ($gutter*($units/$of-how-many));
   margin-left: $gutter;
