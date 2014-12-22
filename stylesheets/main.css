@@ -862,8 +862,9 @@ pre {
 
 /* line 33, ../sass/main.scss */
 .wrapper {
-  width: 960px;
+  width: 58em;
   margin: 0 auto;
+  padding: 0 1em;
 }
 @media screen and (max-width: 960px) {
   /* line 33, ../sass/main.scss */
@@ -878,17 +879,17 @@ pre {
   }
 }
 
-/* line 44, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 aside {
   font-size: .75em;
 }
 
-/* line 49, ../sass/main.scss */
+/* line 50, ../sass/main.scss */
 section.border-bottom {
   border-bottom: 1px solid #ccc;
 }
 
-/* line 54, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .mono {
   font-family: monospace, monospace;
 }
