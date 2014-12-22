@@ -2,6 +2,10 @@
 @import '_variables';
 @import '_grid';
 
+pre{
+  @include pre-wrap();
+}
+
 .greyboxes{
   div{
     background: #aaa;
@@ -29,6 +33,12 @@
 .wrapper{
   width: 960px;
   margin: 0 auto;
+  @media screen and (max-width: $desktop-width){
+    width: 50em;
+  }
+  @media screen and (max-width: $tablet-width){
+    width: 90%;
+  }
 }
 
 aside{

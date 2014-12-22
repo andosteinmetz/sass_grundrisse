@@ -66,7 +66,9 @@
     </section>
 
     <section class="wrapper">
-        <p>The generated CSS for a two-column grid with 1.5% gutters begins like this:</p>
+        <p>The generated CSS for this section &mdash; a two-column grid with 1.5% gutters begins like this:</p>
+        <div class="row med-single-col">
+            <div class="col one-of-two">
         <pre>
 .row {
   position: relative;
@@ -81,7 +83,6 @@
 .row .col {
   margin-left: 1.5%;
   float: left;
-  /* one way of using media queries on a per-column basis */
 }
 /* line 40, ../sass/_grid.scss */
 .row .col:first-child {
@@ -93,6 +94,19 @@
   float: left;
 }
         </pre>
+            </div>
+            <div class="col one-of-two">
+                <p>
+                    The markup for this section looks like this:
+                    <pre>
+&#60;div class="row med-single-col">
+    &#60;div class="col one-of-two">...&#60;/div>
+    &#60;div class="col one-of-two">...&#60;/div>
+&#60;/div>
+                    </pre>
+                </p>
+            </div>
+        </div>
     </section>
 
     <section class="row wrapper">

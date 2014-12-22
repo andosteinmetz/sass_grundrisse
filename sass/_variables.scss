@@ -38,10 +38,10 @@ $gutter-width: 1.5%;
   border-radius: $radius;
 }
 
-@mixin column($units, $of-how-many){
-  //width: (($units/$of-how-many)*100%) - ($gutter-width/($of-how-many*($units/$of-how-many)));
-  width: (($units/$of-how-many)*100) - $gutter-width + ($gutter-width*($units/$of-how-many));
-}
+//@mixin column($units, $of-how-many){
+//  //width: (($units/$of-how-many)*100%) - ($gutter-width/($of-how-many*($units/$of-how-many)));
+//  width: (($units/$of-how-many)*100) - $gutter-width + ($gutter-width*($units/$of-how-many));
+//}
 
 @mixin one-of-two{
   width: 50% - ($gutter-width/2);
@@ -79,3 +79,11 @@ $gutter-width: 1.5%;
   width: 80% - $gutter-width;
 }
 
+
+@mixin pre-wrap{
+  white-space: pre-wrap;       /* CSS 3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;
+}

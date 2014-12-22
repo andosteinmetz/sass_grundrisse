@@ -617,6 +617,8 @@ th {
 /* line 30, ../sass/_grid.scss */
 .row {
   position: relative;
+  /* another approach on a per-row basis */
+  /* inline-block rows for top menus, etc. */
 }
 /* line 13, ../sass/_variables.scss */
 .row:after {
@@ -811,22 +813,35 @@ th {
   margin-left: 0;
 }
 
-/* line 6, ../sass/main.scss */
+/* line 5, ../sass/main.scss */
+pre {
+  white-space: pre-wrap;
+  /* CSS 3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+}
+
+/* line 10, ../sass/main.scss */
 .greyboxes div {
   background: #aaa;
 }
 
-/* line 12, ../sass/main.scss */
+/* line 16, ../sass/main.scss */
 .pinkboxes div {
   background: #eaa;
 }
 
-/* line 18, ../sass/main.scss */
+/* line 22, ../sass/main.scss */
 .row .col {
   margin-bottom: 1em;
 }
 
-/* line 23, ../sass/main.scss */
+/* line 27, ../sass/main.scss */
 .horizontal-menu {
   text-align: justify;
   margin-left: 0;
@@ -845,18 +860,30 @@ th {
   display: inline-block;
 }
 
-/* line 29, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 .wrapper {
   width: 960px;
   margin: 0 auto;
 }
+@media screen and (max-width: 960px) {
+  /* line 33, ../sass/main.scss */
+  .wrapper {
+    width: 50em;
+  }
+}
+@media screen and (max-width: 50em) {
+  /* line 33, ../sass/main.scss */
+  .wrapper {
+    width: 90%;
+  }
+}
 
-/* line 34, ../sass/main.scss */
+/* line 44, ../sass/main.scss */
 aside {
   font-size: .75em;
 }
 
-/* line 38, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 .mono {
   font-family: monospace, monospace;
 }
