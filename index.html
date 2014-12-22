@@ -16,7 +16,7 @@
     <section class="wrapper">
         <p>Having tried out a number of frameworks and responsive grids from around the internet, I felt that what was available was frequently overbuilt, overly-opinionated, and restrictive.
         And, having designed and coded a handful, myself, I found myself repeating tedious work using a variety of approaches to achieve the same ends.</p>
-        <p>So recently, I sat down and looked at what was out there, and took what seemed best from those, and rolled what I found into this simple formula for making a responsive grid that suits your needs, whatever they might be, so long as they involve breaking a screen up into proportional sections.</p>
+        <p>So recently, I sat down and looked at what was out there, took the parts that seemed best, and rolled what I found into this simple formula for making a responsive grid that suits your needs, whatever they might be, so long as they involve breaking a screen up into proportional sections.</p>
     </section>
     <section class="wrapper">
         <div class="row">
@@ -66,28 +66,29 @@
     </section>
 
     <section class="wrapper">
-        <p>The generated CSS for this section &mdash; a two-column grid with 1.5% gutters begins like this:</p>
         <div class="row med-single-col">
             <div class="col one-of-two">
+            <p>The generated CSS for this section, a two-column grid with 1.5% gutters, begins like this:</p>
         <pre>
 .row {
   position: relative;
 }
-/* line 13, ../sass/_variables.scss */
+
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 34, ../sass/_grid.scss */
+
 .row .col {
   margin-left: 1.5%;
   float: left;
 }
-/* line 40, ../sass/_grid.scss */
+
 .row .col:first-child {
   margin-left: 0;
 }
+
 .row .col.one-of-two {
   width: 49.25%;
   margin-left: 1.5%;
@@ -100,8 +101,13 @@
                     The markup for this section looks like this:
                     <pre>
 &#60;div class="row med-single-col">
-    &#60;div class="col one-of-two">...&#60;/div>
-    &#60;div class="col one-of-two">...&#60;/div>
+    &#60;div class="col one-of-two">
+        The generated CSS for this section...
+    &#60;/div>
+
+    &#60;div class="col one-of-two">
+        The markup for this section...
+    &#60;/div>
 &#60;/div>
                     </pre>
                 </p>
