@@ -883,7 +883,12 @@ aside {
   font-size: .75em;
 }
 
-/* line 48, ../sass/main.scss */
+/* line 49, ../sass/main.scss */
+section.border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 54, ../sass/main.scss */
 .mono {
   font-family: monospace, monospace;
 }

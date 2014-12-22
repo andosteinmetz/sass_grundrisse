@@ -45,6 +45,12 @@ aside{
   font-size: .75em;
 }
 
+section{
+  &.border-bottom{
+    border-bottom: 1px solid #ccc;
+  }
+}
+
 .mono{
   font-family: monospace, monospace;
 }

@@ -13,12 +13,12 @@
             <h3>A Simple System for Creating Responsive Grids</h3>
         </header>
     </div>
-    <section class="wrapper">
+    <section class="wrapper border-bottom">
         <p>Having tried out a number of frameworks and responsive grids from around the internet, I felt that what was available was frequently overbuilt, overly-opinionated, and restrictive.
         And, having designed and coded a handful, myself, I found myself repeating tedious work using a variety of approaches to achieve the same ends.</p>
         <p>So recently, I sat down and looked at what was out there, took the parts that seemed best, and rolled what I found into this simple formula for making a responsive grid that suits your needs, whatever they might be, so long as they involve breaking a screen up into proportional sections.</p>
     </section>
-    <section class="wrapper">
+    <section class="wrapper border-bottom">
         <div class="row">
             <div class="col">
                 <p>The code is written with the following goals in mind:</p>
@@ -30,6 +30,10 @@
                     <li>The generated styles are percentage-based, and will scale either to the window, or to their parent element.</li>
                     <li>Rows or wrappers can be given fixed widths in ems or pixels at various breakpoints, for a stepwise responsive grid.</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper border-bottom">
 
                 <p>Here's the central code, a single Sass mixin:</p>
 
