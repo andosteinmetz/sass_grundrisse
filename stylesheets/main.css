@@ -617,8 +617,6 @@ th {
 /* line 30, ../sass/_grid.scss */
 .row {
   position: relative;
-  /* another approach on a per-row basis */
-  /* inline-block rows for top menus, etc. */
 }
 /* line 13, ../sass/_variables.scss */
 .row:after {
@@ -856,4 +854,9 @@ th {
 /* line 34, ../sass/main.scss */
 aside {
   font-size: .75em;
+}
+
+/* line 38, ../sass/main.scss */
+.mono {
+  font-family: monospace, monospace;
 }

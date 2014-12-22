@@ -21,7 +21,10 @@
     <section class="wrapper">
         <div class="row">
             <div class="col">
+                <p>The code was written with the following goals in mind:</p>
                 <ul>
+                    <li>Restrict the styles associated with the grid to dividing the screen along its x-axis.</li>
+                    <li>Minimum markup required to implement the grid. Only two elements: a <span class="mono">row</span> and any number of <span class="mono">cols</span> are required.</li>
                     <li>Rather than supplying a predefined grid, these tools allow you to make your own grids as you need them.</li>
                     <li>Responsive rules can be declared on a per-column or per-row basis, as preferred.</li>
                     <li>The generated styles are percentage-based, and will scale either to the window, or to their parent element.</li>
@@ -41,7 +44,7 @@
 }
                 </pre>
 
-                <p><small>(That's it!)</small></p>
+                <p><small>(That's it!)</small> Beyond that, define your own styles.</p>
 
                 <p>The mixin takes three arguments:</p>
             </div>
@@ -51,9 +54,45 @@
             <div class="col one-of-three"><strong>$of-how-many:</strong> the number of units in the grid row, and</div>
             <div class="col one-of-three"><strong>$gutters (optional):</strong> specifying the width of the gutters between columns.*</div>
         </div>
-        <aside>* gutter width should be given as a percentage. Gutters are to the left, and omitted on the first child.<br>
-            If no gutter width is specified, it defaults to the global value provided in "_variables.scss" as $gutter-width.
-        </aside>
+        <div class="row">
+            <div class="col one-of-three"></div>
+            <div class="col one-of-three"></div>
+            <div class="col one-of-three"><aside>* gutter width should be given as a percentage.<br>
+                Gutters are to the left, and omitted on the first child.<br>
+                If no gutter width is specified, it defaults to the global value provided in "_variables.scss" as $gutter-width.
+            </aside></div>
+        </div>
+
+    </section>
+
+    <section class="wrapper">
+        <p>The generated CSS for a two-column grid with 1.5% gutters begins like this:</p>
+        <pre>
+.row {
+  position: relative;
+}
+/* line 13, ../sass/_variables.scss */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 34, ../sass/_grid.scss */
+.row .col {
+  margin-left: 1.5%;
+  float: left;
+  /* one way of using media queries on a per-column basis */
+}
+/* line 40, ../sass/_grid.scss */
+.row .col:first-child {
+  margin-left: 0;
+}
+.row .col.one-of-two {
+  width: 49.25%;
+  margin-left: 1.5%;
+  float: left;
+}
+        </pre>
     </section>
 
     <section class="row wrapper">
