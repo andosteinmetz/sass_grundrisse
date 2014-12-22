@@ -7,8 +7,62 @@
     <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 <body>
-    <h1>Responsive Grid</h1>
-    <section class="row pinkboxes">
+    <div class="wrapper">
+        <header>
+            <h1>The Sass Grundrisse</h1>
+            <h3>A Simple System for Creating Responsive Grids</h3>
+        </header>
+    </div>
+    <section class="wrapper">
+        <p>Having tried out a number of frameworks and responsive grids from around the internet, I felt that what was available was frequently overbuilt, overly-opinionated, and restrictive.
+        And, having designed and coded a handful, myself, I found myself repeating tedious work using a variety of approaches to achieve the same ends.</p>
+        <p>So recently, I sat down and looked at what was out there, and took what seemed best from those, and rolled what I found into this simple formula for making a responsive grid that suits your needs, whatever they might be, so long as they involve breaking a screen up into proportional sections.</p>
+    </section>
+    <section class="wrapper">
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li>Rather than supplying a predefined grid, these tools allow you to make your own grids as you need them.</li>
+                    <li>Responsive rules can be declared on a per-column or per-row basis, as preferred.</li>
+                    <li>The generated styles are percentage-based, and will scale either to the window, or to their parent element.</li>
+                    <li>Rows or wrappers can be given fixed widths in ems or pixels at various breakpoints, for a stepwise responsive grid.</li>
+                </ul>
+
+                <p>Here's the central code, a single Sass mixin:</p>
+
+                <pre>
+@mixin column($units, $of-how-many, $gutter: $gutter-width){
+  width: (($units/$of-how-many)*100) - $gutter + ($gutter*($units/$of-how-many));
+  margin-left: $gutter;
+  float: left;
+  &:first-child{
+    margin-left: 0;
+  }
+}
+                </pre>
+
+                <p><small>(That's it!)</small></p>
+
+                <p>The mixin takes three arguments:</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col one-of-three"><strong>$units:</strong> (the number of grid units the column will occupy)</div>
+            <div class="col one-of-three"><strong>$of-how-many:</strong> the number of units in the grid row, and</div>
+            <div class="col one-of-three"><strong>$gutters (optional):</strong> specifying the width of the gutters between columns.*</div>
+        </div>
+        <aside>* gutter width should be given as a percentage. Gutters are to the left, and omitted on the first child.<br>
+            If no gutter width is specified, it defaults to the global value provided in "_variables.scss" as $gutter-width.
+        </aside>
+    </section>
+
+    <section class="row wrapper">
+        <div class="col one-of-three"></div>
+        <div class="col one-of-three"></div>
+        <div class="col one-of-three"></div>
+    </section>
+
+    <!--<section class="row pinkboxes">
         <div class="col one-of-two">
             <ul class="horizontal-menu">
                 <li>justified</li>
@@ -29,11 +83,6 @@
         <div class="col one-of-three">one of three</div>
         <div class="col one-of-three">one of three</div>
     </section>
-    <!--<section class="row greyboxes">
-        <div class="col one-of-four">one of four</div>
-        <div class="col one-of-two">two of four</div>
-        <div class="col one-of-four">one of four</div>
-    </section>-->
 
     <section class="row pinkboxes med-single-col">
         <div class="col one-of-four">one of four</div>
@@ -45,6 +94,6 @@
         <div class="col one-of-four med-one-of-two">one of four</div>
         <div class="col one-of-four med-one-of-two">one of four</div>
         <div class="col one-of-four med-one-of-two">one of four</div>
-    </section>
+    </section>-->
 </body>
 </html>
