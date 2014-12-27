@@ -31,9 +31,8 @@ pre{
 }
 
 .wrapper{
-  width: 58em;
+  width: 60em;
   margin: 0 auto;
-  padding: 0 1em;
   @media screen and (max-width: $desktop-width){
     width: 50em;
   }
