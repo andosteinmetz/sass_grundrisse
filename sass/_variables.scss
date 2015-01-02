@@ -1,3 +1,9 @@
+/*
+  TODO - rename breakpoints to reflect general categories of small medium large, not particular devices.
+  TODO - move grid-related variables to _grid.scss? in this case, all code pertaining to the grid would live in the grid. this file might be renamed _mixins.scss, and other variables would just live at the top of the relevant files...
+*/
+
+
 $serif-font-stack: Georgia, serif;
 $sans-serif-font-stack: Helvetica, Arial, sans-serif;
 $base-font-size: 16px;

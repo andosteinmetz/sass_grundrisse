@@ -18,6 +18,10 @@
 *  if no gutter width is specified, it defaults to the global value provided in "_variables.scss" as $gutter-width.
 */
 
+/*
+*  TODO - consider borders. in the current implementation borders would be pressed up against the col content. this might be fixed by switching to padding, and splitting the gutters between the cols.
+*/
+
 @mixin column($units, $of-how-many, $gutter: $gutter-width){
   width: (($units/$of-how-many)*100) - $gutter + ($gutter*($units/$of-how-many));
   margin-left: $gutter;
