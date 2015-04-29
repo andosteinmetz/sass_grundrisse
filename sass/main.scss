@@ -6,18 +6,6 @@ pre{
   @include pre-wrap();
 }
 
-.greyboxes{
-  div{
-    background: #aaa;
-  }
-}
-
-.pinkboxes{
-  div{
-    background: #eaa;
-  }
-}
-
 .row{
   .col{
     margin-bottom: 1em;
